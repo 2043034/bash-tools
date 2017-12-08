@@ -1,0 +1,37 @@
+# This code is not executable
+# You will have to add the below code to ~/.bashrc for it to work
+
+n-setup() {
+	echo "welcome to n - note taking tool"
+	echo "making /home/$USER/.notes/ dir"
+	echo "setting up n..."
+	mkdir ~/.notes
+	echo "ready"
+	echo "type 'n-help' for syntax"
+}
+
+n() {
+	nano ~/.notes/"$*".txt
+}
+
+nls() {
+	ls -c ~/.notes/ | grep "$*"
+}
+
+n-rm() {
+	rm -f ~/.notes/"$*".txt
+}
+
+n-open() {
+	cat ~/.notes/"$*".txt
+}
+
+n-help() {
+	echo "welcome to n - note taking tool"
+	echo "built in commands:"
+	echo "n-setup: set up n program"
+	echo "n: make a new note or edit one if it exists"
+	echo "nls: list all notes"
+	echo "n-rm: remove a note"
+	echo "n-open: view/edit a note"
+}
