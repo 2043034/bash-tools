@@ -1,0 +1,21 @@
+# This code is not executable
+# You will have to add the below code to ~/.bashrc for it to work
+# Use this code to quickly generate a 1mb, 1gb, or 1tb file
+
+mk1mb() {
+echo "Generating 1MB file"
+echo
+dd if=/dev/zero of=1mb.file count=1024 bs=1024
+}
+
+mk1gb() {
+echo "Generating 1GB file"
+echo
+dd if=/dev/zero of=1gb.file count=32678 bs=32678
+}
+
+mk1tb() {
+dd if=/dev/zero of=1tb.file count=1048576 bs=1048576
+}
+
+
